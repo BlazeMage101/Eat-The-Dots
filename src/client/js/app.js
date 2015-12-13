@@ -130,9 +130,9 @@ var foodConfig = {
 var playerConfig = {
     border: 6,
     textColor: '#FFFFFF',
-    textBorder: '#000000',
-    textBorderSize: 3,
-    defaultSize: 30
+    textBorder: '#DBDBDB',
+    textBorderSize: 2,
+    defaultSize: 47
 };
 
 var player = {
@@ -740,7 +740,7 @@ function drawPlayers(order) {
         graph.lineJoin = 'round';
         graph.textAlign = 'center';
         graph.textBaseline = 'middle';
-        graph.font = 'bold ' + fontSize + 'px sans-serif';
+        graph.font = 'bold ' + fontSize + 'px Chewy';
 
         if (toggleMassState === 0) {
             graph.strokeText(nameCell, circle.x, circle.y);
@@ -864,7 +864,7 @@ function gameLoop() {
 
         graph.textAlign = 'center';
         graph.fillStyle = '#FFFFFF';
-        graph.font = 'bold 30px sans-serif';
+        graph.font = 'bold 30px Chewy';
         graph.fillText('You died!', screenWidth / 2, screenHeight / 2);
     }
     else if (!disconnected) {
@@ -907,7 +907,7 @@ function gameLoop() {
 
             graph.textAlign = 'center';
             graph.fillStyle = '#FFFFFF';
-            graph.font = 'bold 30px sans-serif';
+            graph.font = 'bold 30px Chewy';
             graph.fillText('Game Over!', screenWidth / 2, screenHeight / 2);
         }
     } else {
@@ -916,7 +916,7 @@ function gameLoop() {
 
         graph.textAlign = 'center';
         graph.fillStyle = '#FFFFFF';
-        graph.font = 'bold 30px sans-serif';
+        graph.font = 'bold 30px Chewy';
         if (kicked) {
             if (reason !== '') {
                 graph.fillText('You were kicked for reason:', screenWidth / 2, screenHeight / 2 - 20);
@@ -939,4 +939,3 @@ function resize() {
     player.screenHeight = c.height = screenHeight = playerType == 'player' ? window.innerHeight : gameHeight;
     socket.emit('windowResized', { screenWidth: screenWidth, screenHeight: screenHeight });
 }
-
