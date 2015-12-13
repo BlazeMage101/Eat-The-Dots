@@ -128,10 +128,10 @@ var foodConfig = {
 };
 
 var playerConfig = {
-    border: 0,
+    border: 2,
     textColor: '#FFFFFF',
-    textBorder: '#000000',
-    textBorderSize: 0,
+    textBorder: '#FFFFFF',
+    textBorderSize: 3,
     defaultSize: 30
 };
 
@@ -740,7 +740,7 @@ function drawPlayers(order) {
         graph.lineJoin = 'round';
         graph.textAlign = 'center';
         graph.textBaseline = 'middle';
-        graph.font = 'bold ' + fontSize + 'px sans-serif';
+        graph.font = 'bold ' + fontSize + 'px Chewy';
 
         if (toggleMassState === 0) {
             graph.strokeText(nameCell, circle.x, circle.y);
@@ -748,7 +748,7 @@ function drawPlayers(order) {
         } else {
             graph.strokeText(nameCell, circle.x, circle.y);
             graph.fillText(nameCell, circle.x, circle.y);
-            graph.font = 'bold ' + Math.max(fontSize / 3 * 2, 10) + 'px sans-serif';
+            graph.font = 'bold ' + Math.max(fontSize / 3 * 2, 10) + 'px Chewy';
             if(nameCell.length === 0) fontSize = 0;
             graph.strokeText(Math.round(cellCurrent.mass), circle.x, circle.y+fontSize);
             graph.fillText(Math.round(cellCurrent.mass), circle.x, circle.y+fontSize);
@@ -864,7 +864,7 @@ function gameLoop() {
 
         graph.textAlign = 'center';
         graph.fillStyle = '#FFFFFF';
-        graph.font = 'bold 30px sans-serif';
+        graph.font = 'bold 30px Chewy';
         graph.fillText('You died!', screenWidth / 2, screenHeight / 2);
     }
     else if (!disconnected) {
@@ -907,7 +907,7 @@ function gameLoop() {
 
             graph.textAlign = 'center';
             graph.fillStyle = '#FFFFFF';
-            graph.font = 'bold 30px sans-serif';
+            graph.font = 'bold 30px Chewy';
             graph.fillText('Game Over!', screenWidth / 2, screenHeight / 2);
         }
     } else {
@@ -916,7 +916,7 @@ function gameLoop() {
 
         graph.textAlign = 'center';
         graph.fillStyle = '#FFFFFF';
-        graph.font = 'bold 30px sans-serif';
+        graph.font = 'bold 30px Chewy';
         if (kicked) {
             if (reason !== '') {
                 graph.fillText('You were kicked for reason:', screenWidth / 2, screenHeight / 2 - 20);
