@@ -22,6 +22,14 @@
             <input type="text" tabindex="0" autofocus placeholder="Enter your name here" id="playerNameInput" maxlength="25" />
             <b class="input-error">Only Letters and Numbers</b>
             <br />
+            <select name="sselect" id="playerNameInput" class="styled" onChange="location=document.jump.menu.options[document.jump.menu.selectedIndex].value;" value="GO">
+            <option value="http://eatd-ffa1.herokuapp.com">FFA 1 (US)</option>
+            <option value="http://eatd-ffa2.herokuapp.com">FFA 2 (US)</option>
+            <option value="http://eatd-ffa3.herokuapp.com">FFA 3 (US)</option>
+            <option value="http://eatd-ffa4.herokuapp.com">FFA 4 (US)</option>
+            <option value="http://eatd-ffa5.herokuapp.com">FFA 5 (EU)</option>
+            </select>
+            <br />
             <button id="startButton">Play</button>
             <button id="spectateButton">Spectate</button>
             <button id="settingsButton">Settings</button>
