@@ -128,10 +128,10 @@ var foodConfig = {
 };
 
 var playerConfig = {
-    border: 4,
+    border: 6,
     textColor: '#FFFFFF',
     textBorder: '#FFFFFF',
-    textBorderSize: 0,
+    textBorderSize: 3,
     defaultSize: 47
 };
 
@@ -740,7 +740,7 @@ function drawPlayers(order) {
         graph.lineJoin = 'round';
         graph.textAlign = 'center';
         graph.textBaseline = 'middle';
-        graph.font = 'bold ' + fontSize + 'px Chewy';
+        graph.font = 'bold ' + fontSize + 'px sans-serif';
 
         if (toggleMassState === 0) {
             graph.strokeText(nameCell, circle.x, circle.y);
@@ -748,7 +748,7 @@ function drawPlayers(order) {
         } else {
             graph.strokeText(nameCell, circle.x, circle.y);
             graph.fillText(nameCell, circle.x, circle.y);
-            graph.font = 'bold ' + Math.max(fontSize / 3 * 2, 10) + 'px Chewy';
+            graph.font = 'bold ' + Math.max(fontSize / 3 * 2, 10) + 'px sans-serif';
             if(nameCell.length === 0) fontSize = 0;
             graph.strokeText(Math.round(cellCurrent.mass), circle.x, circle.y+fontSize);
             graph.fillText(Math.round(cellCurrent.mass), circle.x, circle.y+fontSize);
