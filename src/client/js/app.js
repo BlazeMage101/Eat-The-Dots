@@ -128,11 +128,11 @@ var foodConfig = {
 };
 
 var playerConfig = {
-    border: 2,
+    border: 4,
     textColor: '#FFFFFF',
     textBorder: '#FFFFFF',
     textBorderSize: 0,
-    defaultSize: 30
+    defaultSize: 47
 };
 
 var player = {
