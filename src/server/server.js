@@ -118,7 +118,7 @@ function movePlayer(player) {
             }
         }
         if(player.cells.length > i) {
-            var borderCalc = player.cells[i].radius / 0;
+            var borderCalc = player.cells[i].radius / 3;
             if (player.cells[i].x > c.gameWidth - borderCalc) {
                 player.cells[i].x = c.gameWidth - borderCalc;
             }
@@ -155,7 +155,7 @@ function moveMass(mass) {
         mass.x += deltaX;
     }
 
-    var borderCalc = mass.radius + 0;
+    var borderCalc = mass.radius + 5;
 
     if (mass.x > c.gameWidth - borderCalc) {
         mass.x = c.gameWidth - borderCalc;
