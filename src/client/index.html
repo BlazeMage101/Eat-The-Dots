@@ -22,21 +22,35 @@
             <input type="text" tabindex="0" autofocus placeholder="Enter your name here" id="playerNameInput" maxlength="25" />
             <b class="input-error">Only Letters and Numbers</b>
             <br />
-            <div id="settings">
-                <ul>
-                    <a href=http://eatd-ffa1.herokuapp.com><button class="startButton">FFA 1 (US)</button></a>
-                    <a href=http://eatd-ffa2.herokuapp.com><button class="startButton">FFA 2 (US)</button></a>
-                    <a href=http://eatd-ffa3.herokuapp.com><button class="startButton">FFA 3 (US)</button></a>
-                    <a href=http://eatd-ffa4.herokuapp.com><button class="startButton">FFA 4 (US)</button></a>
-                    <a href=http://eatd-ffa5.herokuapp.com><button class="startButton">FFA 5 (US)</button></a>
-                </ul>
-            </div>
+            <form>
+            <select onChange="location=this.options[this.selectedIndex].value;">
+            <option value="http://eatd-ffa1.herokuapp.com">FFA 1 (US)</option>
+            <option value="http://eatd-ffa2.herokuapp.com">FFA 2 (US)</option>
+            <option value="http://eatd-ffa3.herokuapp.com">FFA 3 (US)</option>
+            <option value="http://eatd-ffa4.herokuapp.com">FFA 4 (US)</option>
+            <option value="http://eatd-ffa5.herokuapp.com">FFA 5 (EU)</option>
+            </select>
+            </form>
             <br />
             <button id="startButton">Play</button>
             <button id="spectateButton">Spectate</button>
-            <button id="settingsButton">Change Server</button>
+            <button id="settingsButton">Settings</button>
             <br />
-            
+            <div id="settings">
+                <h3>Settings</h3>
+                <ul>
+                    <label><input id="visBord" type="checkbox">Show borders</label>
+                    <br />
+                    <br />
+                    <label><input id="showMass" type="checkbox">Show mass</label>
+                    <br />
+                    <br />
+                    <label><input id="continuity" type="checkbox">Continue moving when mouse is off-screen</label>
+                    <br />
+                    <br />
+                    <label><input id="roundFood" type="checkbox" checked>Rounded food</label>
+                </ul>
+            </div>
         </div>
     </div>
     <script src="js/app.js"></script>
