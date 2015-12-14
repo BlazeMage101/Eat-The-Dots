@@ -452,11 +452,6 @@ function toggleRoundFood(args) {
     }
 }
 
-function addfood(args) {
-    // AddFood
-    drawFood(args)
-}
-
 // TODO
 // Break out many of these game controls into a separate class
 
@@ -494,10 +489,6 @@ chat.registerCommand('login', 'Login as an admin', function (args) {
 
 chat.registerCommand('kick', 'Kick a player', function (args) {
     socket.emit('kick', args);
-});
-
-chat.registerCommand('addfood', '-----', function (args) {
-    addfood();
 });
 
 
