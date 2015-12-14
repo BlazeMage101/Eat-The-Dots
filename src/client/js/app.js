@@ -132,7 +132,7 @@ var playerConfig = {
     textColor: '#FFFFFF',
     textBorder: '#5E5E5E',
     textBorderSize: 3,
-    defaultSize: 47
+    defaultSize: 55
 };
 
 var player = {
