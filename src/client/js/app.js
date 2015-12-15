@@ -88,6 +88,17 @@ window.onload = function() {
         }
     };
 
+    var serversMenu = document.getElementById('serversButton');
+    var servers = document.getElementById('servers');
+
+    serversMenu.onclick = function () {
+        if (servers.style.maxHeight == '300px') {
+            servers.style.maxHeight = '0px';
+        } else {
+            servers.style.maxHeight = '300px';
+        }
+    };
+
     playerNameInput.addEventListener('keypress', function (e) {
         var key = e.which || e.keyCode;
 
