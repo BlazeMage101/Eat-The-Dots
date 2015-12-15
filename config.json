@@ -3,7 +3,7 @@
     "foodMass": 1,
     "fireFood": 20,
     "limitSplit": 16,
-    "defaultPlayerMass": 10,
+    "defaultPlayerMass": 10000,
     "gameWidth": 5000,
     "gameHeight": 5000,
     "adminPass": "DEFAULT",
